@@ -3,9 +3,25 @@ import time
 import winsound
 
 Art1 = [
-	" ", " _   _| |__  _   _ _ __ | |_ _   _ ", "| | | | '_ \| | | | '_ \| __| | | |", 
-	"| |_| | |_) | |_| | | | | |_| |_| |", " \__,_|_.__/ \__,_|_| |_|\__|\__,_|", " "
+	" ", "I MUST USE WINDOWS 8 AS INSTRUCTED.           ",  "                           \                  ", 
+	"                                .....         ", "                               C C  /         ", 
+	"                              /<   /          ", "               ___ __________/_#__=o          ", 
+	"              /(- /(\_\________   \           ", "              \ ) \ )_      \o     \          ", 
+	"              /|\ /|\       |'     |          ", "                            |     _|          ", 
+	"                            /o   __\          ", "                           / '     |          ", 
+	"                          / /      |          ", "                         /_/\______|          ", 
+	"                        (   _(    <           ", "                         \    \    \          ", 
+	"                          \    \    |         ", "                           \____\____\        ", 
+	"                           ____\_\__\_\       ", "                         /`   /`     o\       ", 
+	"                         |___ |_______|       ", " "
 ]
+
+Art2 = [
+	" ", "anti-Windows sequence started...", " ", " _   _| |__  _   _ _ __ | |_ _   _ ", "| | | | '_ \| | | | '_ \| __| | | |", 
+	"| |_| | |_) | |_| | | | | |_| |_| |", " \__,_|_.__/ \__,_|_| |_|\__|\__,_|", " ", "               | |       ", 
+	"  _ __ __   ___| | _____ ", "| '__/ _ \ / __| |/ / __|", "| | | (_) | (__|   <\__ \.", "|_|  \___/ \___|_|\_\___/", " "
+]
+
 
 S120 = 120
 S1500 = 1500
@@ -35,13 +51,19 @@ def sanityCountdown(seconds=0):
 		seconds = seconds-1
 	else:
 		napTime(1)
-		print("anti-Windows sequence started... ")
+		for row1 in Art1:
+			napTime(1)
+			print(row1)
+
+		print("MAJOR FAIL DETECTION ALERT... MUST STOP WINDOWS 8...")
+		napTime(1)
 		theMostAnnoyingSoundInTheWorld(1)
 		napTime(1)
 		theLessAnnoyingSoundSequence(4)
-		for row in Art1:
+
+		for row2 in Art2:
 			napTime(1)
-			print(row)
+			print(row2)
 
 # run option
 if __name__ == '__main__':
