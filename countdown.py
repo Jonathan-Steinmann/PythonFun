@@ -62,10 +62,15 @@ def sanityCountdown(seconds=0):
 			napTime(1)
 			print(row2)
 
-# run option
+
+#run option - no requirements
 if __name__ == '__main__':
-	try:
-		seconds = (int(sys.argv[1]))
-		sanityCountdown(seconds)
-	except IndexError:
-		print("How to use: countdown.py <number>")
+	sanityCountdown()
+
+# run option - require countdown
+# if __name__ == '__main__':
+# 	try:
+# 		seconds = (int(sys.argv[1]))
+# 		sanityCountdown(seconds)
+# 	except IndexError:
+# 		print("How to use: countdown.py <number>")
