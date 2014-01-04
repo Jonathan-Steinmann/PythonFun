@@ -67,8 +67,10 @@ def sanityCountdown(seconds=0):
 		theMostAnnoyingSoundInTheWorld(1)
 		napTime(1)
 		theLessAnnoyingSoundSequence(3)
+		napTime(3)
 		print(OKGREEN + "anti-Windows sequence started..." + ENDC)
-		for x in range(0,50000):
+		napTime(3)
+		for x in range(0,20000):
 			for row2 in Art2:
 				print(row2)
 		for row3 in Art2:
