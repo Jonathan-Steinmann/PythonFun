@@ -62,6 +62,14 @@ class Countdown:
 			self.soundFactory(self.S2000, self.S120)
 			self.soundFactory(self.S2500, self.S120)
 
+	def getArt(self, arg):
+		if arg == "art1":
+			return self.Art1
+		elif arg == "art2":
+			return self.Art2
+		else:
+			return self.Art3
+
 	def sanityCountdown(self, seconds=0):
 		while seconds > 0:
 			self.napTime(1)
@@ -69,7 +77,7 @@ class Countdown:
 			seconds = seconds-1
 		else:
 			self.napTime(1)
-			for row1 in self.Art1:
+			for row1 in self.getArt("art1"):
 				self.napTime(1)
 				print(row1)
 			print(self.FAIL + self.ALERT + self.ENDC)
@@ -80,12 +88,12 @@ class Countdown:
 			self.napTime(3)
 			print(self.OKGREEN + self.START + self.ENDC)
 			self.napTime(3)
-			for x in range(0,100000):
-				for row2 in self.Art2:
+			for x in range(0,70000):
+				for row2 in self.getArt("art2"):
 					print(row2)
 			for y in range(0,50):
 				print("\r\n")
-			for row3 in self.Art3:
+			for row3 in self.getArt("art3"):
 				self.napTime(1)
 				print(self.OKGREEN + row3)
 			print(":) \r\n" + self.ENDC)
