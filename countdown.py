@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class Countdown:
 
 	import time
@@ -15,7 +17,7 @@ class Countdown:
 	START = "ANTI-WINDOWS SEQUENCE STARTING..."
 
 	Art1 = [
-		" ", WIN8,  "                           \                  ", 
+		" ", WIN8, "                           \                  ", 
 		"                                .....         ", "                               C C  /         ", "                              /<   /          ", 
 		"               ___ __________/_#__=o          ", "              /(- /(\_\________   \           ", "              \ ) \ )_      \o     \          ", 
 		"              /|\ /|\       |'     |          ", "                            |     _|          ", "                            /o   __\          ", 
@@ -36,6 +38,7 @@ class Countdown:
 		"| | | (_) | (__|   <\__ \.", "|_|  \___/ \___|_|\_\___/", " ", " "
 	]
 
+
 	def checkOS(self):
 		if os.name == 'nt':
 			import winsound
@@ -43,8 +46,10 @@ class Countdown:
 		else:
 			return False
 
+
 	def napTime(self, ms=1):
 		self.time.sleep(ms)
+
 
 	def soundFactory(self, freq, dur):
 		if self.checkOS == True:
@@ -52,15 +57,18 @@ class Countdown:
 		else:
 			print("\a")
 
+
 	def theMostAnnoyingSoundInTheWorld(self, n=0):
 		for value in range(n):
 			self.soundFactory(self.S1500, self.S2000); 
+
 
 	def theLessAnnoyingSoundSequence(self, n=0):
 		for value in range(n):
 			self.soundFactory(self.S1500, self.S120)
 			self.soundFactory(self.S2000, self.S120)
 			self.soundFactory(self.S2500, self.S120)
+
 
 	def getArt(self, arg):
 		if arg == "art1":
@@ -69,6 +77,7 @@ class Countdown:
 			return self.Art2
 		else:
 			return self.Art3
+
 
 	def sanityCountdown(self, seconds=0):
 		while seconds > 0:
@@ -88,7 +97,7 @@ class Countdown:
 			self.napTime(3)
 			print(self.OKGREEN + self.START + self.ENDC)
 			self.napTime(3)
-			for x in range(0,70000):
+			for x in range(0,20000):
 				for row2 in self.getArt("art2"):
 					print(row2)
 			for y in range(0,50):
